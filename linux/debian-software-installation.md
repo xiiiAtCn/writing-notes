@@ -56,9 +56,31 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git
 ```
     mkfontscale && mkfontdir && fc-cache -fv
 ```
-
 #### 安装SSR及polipo
+```
+    git clone https://github.com/shadowsocksr-backup/shadowsocksr.git
+    apt install polipo
+```
+shadowsocksr配置需要去github查看， 根据服务器不同， 需要的配置项也不同。  
+polipo配置
+```properties
+logSyslog = true
+logFile = /var/log/polipo/polipo.log
+proxyAddress = "0.0.0.0"
 
+socksParentProxy = "127.0.0.1:1080"
+socksProxyType = socks5
+
+chunkHighMark = 50331648
+
+objectHighMark = 12384
+
+serverMaxSlots = 64
+serverSlots = 16
+serverSlots1 = 32
+
+```
+> ssr现在主要分支是manyuser分支， 可以直接下载manyuser分支
 #### 设置终端大小
 ```
     gnome-terminal --geometry=160x40+280+100
