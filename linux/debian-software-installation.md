@@ -91,6 +91,23 @@ serverSlots1 = 32
 ```
 deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
 ```
+2. chrome
+```
+deb http://dl.google.com/linux/chrome/deb/ stable main
+```
+
+#### vscode自定义设置
+```json
+{
+    "editor.fontFamily": "'YaHei Consolas Hybrid','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontSize": 20,
+    "files.autoSave": "afterDelay",
+    "markdown.preview.fontSize": 20,
+    "terminal.integrated.fontSize": 20,
+    "workbench.colorTheme": "Eva Dark",
+    "workbench.iconTheme": "material-icon-theme"
+}
+```
 
 #### 安装nvidia显卡驱动
 1. 禁用开源驱动nouveau
