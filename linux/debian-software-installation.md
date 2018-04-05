@@ -50,3 +50,10 @@ scrot -s
 ```
     mkfontscale && mkfontdir && fc-cache -fv
 ```
+
+#### 安装SSR及polipo
+
+#### 设置终端大小
+```
+    gnome-terminal --geometry=160x40+280+100
+```
