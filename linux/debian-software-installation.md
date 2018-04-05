@@ -35,6 +35,12 @@ scrot
 scrot -s
 ```
 
+#### 安装oh-my-zsh插件
+```
+git clone https://github.com/robbyrussell/oh-my-zsh.git
+```
+安装脚本在master分支下tools/install.sh
+
 #### 安装雅黑和Consolas字体
 1. 下载雅黑和Consolas[字体文件](./file/YaHeiConsolas.tar.gz)
 2. 将文件放到系统字体文件夹内
