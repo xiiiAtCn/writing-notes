@@ -119,3 +119,27 @@ service bumblebee start/restart
 apt install mesa-utils
 glxgears
 ```
+
+#### 安装chrome浏览器
+1. 添加google软件源
+```
+touch /etc/apt/sources.list.d/google.list 
+echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' > /etc/apt/sources.list.d/google.list
+```
+2. 获取公钥签名
+```
+wget https://dl-ssl.google.com/linux/linux_signing_key.pub
+```
+3. 将公钥签名添加到apt中
+```
+apt-key add linux_signing_key.pub && rm -f linux_signing_key.pub
+```
+4. 更新本地软件源缓存
+```
+apt update
+```
+5. 安装chrome浏览器 
+```
+apt install google-chrome-stable
+```
+> chrome在root账户下由于系统保护限制无法打开， 需要使用其他账户， 虽然也可以绕过这个限制， 不过由于软件稳定性的原因，不建议这么做
