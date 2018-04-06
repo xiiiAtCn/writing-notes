@@ -105,7 +105,8 @@ deb http://dl.google.com/linux/chrome/deb/ stable main
     "markdown.preview.fontSize": 20,
     "terminal.integrated.fontSize": 20,
     "workbench.colorTheme": "Eva Dark",
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.renderWhitespace": "all"
 }
 ```
 
