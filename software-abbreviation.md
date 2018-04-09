@@ -15,3 +15,4 @@ tags: abbr
 |XML|Extensible Markup Language|可扩展标记语言|1. [wiki](https://en.wikipedia.org/wiki/XML) 2. [w3cschool](https://www.w3schools.com/xml/default.asp)|
 |SCM|Software Configuration Management|软件配置管理|1. [wiki](https://zh.wikipedia.org/zh-hans/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86) 2. [baidu](https://baike.baidu.com/item/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86)|
 |JMX|Java Management Extensions|Java管理扩展| 1. [wiki](https://en.wikipedia.org/wiki/Java_Management_Extensions) 2. [baidu](https://baike.baidu.com/item/JMX)|
+|SBE|Specification By Example|实例驱动(笔者翻译^_^)|1. [Wiki](https://en.wikipedia.org/wiki/Specification_by_example) 2.[searchsoftwarequality](https://searchsoftwarequality.techtarget.com/definition/Specification-by-example-SBE)|
