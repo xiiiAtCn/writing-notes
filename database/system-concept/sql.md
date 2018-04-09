@@ -33,3 +33,48 @@ having子句中的谓词在形成分组后才起作用
 5. select子句利用剩下的分组产生出查询结果中的分组， 即在每个分组上应用聚集函数来得到单个结果元组。
 
 > 聚集函数中， 除了count(*)外所有的聚集函数都忽略输入集合中的空值。
+
+#### 嵌套子查询
+
+##### 成员资格测试
+SQL允许测试元组在关系中的成员资格。连接词in测试元组是否是集合中的成员， 集合是由select子句产生的一组值构成的。连词not in则测试元组是否不是集合中的成员。
+
+##### 集合的比较
+```sql 示例
+select name from instructor
+where salary > some ( select salary from instructor where dept_name = 'Biology' )
+```
+SQL允许> some, <= some, >= some, = some和<>some. =some等价于in， 而<>some不等价于not in。any与some同义。  
+SQL也支持将上面的some替换成all的形式。 <>all等价于not in， 但 =all并不等价于in
+> <>some表示或关系， 而not in表示与关系
+
+##### 空关系测试
+SQL还有一个特性可测试一个子查询的结果中是否存在元组。exists结构在作为参数的子查询非空时返回true。可以用not exists结构测试子查询结果集中是否不存在元组。
+
+##### 相关子查询
+来自外层查询的一个相关名称可以用在where子句的子查询中。 使用了来自外层查询相关名称的子查询被称作相关子查询。
+
+##### 重复元组存在性测试(未广泛实现)
+SQL提供一个布尔函数， 用于测试在一个子查询的结果中是否存在重复元组。如果作为参数的子查询结果中没有重复的元组，unique结构将返回true
+
+##### from子句中的子查询
+SQL允许在from子句中使用子查询表达式。
+
+##### with子句
+with子句提供定义临时关系的方法，这个定义只对包含with子句的查询有效
+```sql 示例
+with max_budget(value) as 
+    (
+        select max(budget) from department
+    )
+select budget
+from department, max_budget
+where department.budget=max_budget.value
+```
+with子句使查询在逻辑上更加清晰， 它还允许在一个查询内的多个地方使用视图定义。
+
+##### 标量子查询
+SQL允许子查询出现返回单个值的表达式能够出现的任何地方，只要该子查询只返回包含单个属性的单个元组，这样的子查询称为标量子查询。
+
+
+
