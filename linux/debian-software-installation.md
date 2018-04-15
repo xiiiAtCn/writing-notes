@@ -202,7 +202,7 @@ gdebi netease-cloud-music_1.1.0_amd64_deepin.deb
 ```
 3. 若使用的是非root用户启动云音乐，可能会出现软件页面无法显示，但可以查到启动进程的情况。此时需要更改启动图标配置中的启动参数。
 ```bash
-# start-up icon container: /usr/share/applications 
+# start-up icon directory: /usr/share/applications 
 
 # before
 Exec=netease-cloud-music %U 
