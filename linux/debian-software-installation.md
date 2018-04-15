@@ -191,7 +191,7 @@ apt install google-chrome-stable
 > chrome在root账户下由于系统保护限制无法打开， 需要使用其他账户， 虽然也可以绕过这个限制， 不过由于软件稳定性的原因，不建议这么做
 
 #### 安装网易云音乐
-1. 从[官网](https://music.163.com/)下载[deb包](http://d1.music.126.net/dmusic/netease-cloud-music_1.1.0_amd64_deepin.deb)
+1. 从[官网](https://music.163.com/)下载[deb包](http://d1.music.126.net/dmusic/netease-cloud-music_1.1.0_amd64_ubuntu.deb)
 2. 安装deb包可以有两种方式。使用dpkg或gdebi
 ```bash
 dpkg -i netease-cloud-music_1.1.0_amd64_deepin.deb
