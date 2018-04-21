@@ -210,3 +210,11 @@ Exec=netease-cloud-music %U
 Exec=netease-cloud-music %U --no-sandbox
 ```
 4. 重启电脑
+
+#### 安装Franz
+[Franz](https://meetfranz.com/#download)是聊天软件的网页版合集, 支持大多数聊天工具。
+1. 官网下载Linux[版本](https://github.com/meetfranz/franz/releases/download/v5.0.0-beta.18/franz_5.0.0-beta.18_amd64.deb)
+2. 使用gdebi安装
+```
+    gdebi franz_5.0.0-beta.18_amd64.deb
+```
