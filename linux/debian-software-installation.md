@@ -219,3 +219,11 @@ Exec=netease-cloud-music %U --no-sandbox
 ```
     gdebi franz_5.0.0-beta.18_amd64.deb
 ```
+
+#### 安装nodejs
+1. 添加nodejs安装源
+```
+    curl -sL https://deb.nodesource.com/setup_${version}.x | sudo bash -
+```
+2. 根据提示进行安装
+![](./images/2018-05-14-224043_1161x216_scrot.png)
