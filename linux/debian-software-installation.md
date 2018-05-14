@@ -209,6 +209,7 @@ Exec=netease-cloud-music %U
 # after
 Exec=netease-cloud-music %U --no-sandbox
 ```
+> 遇到网易云音乐安装后， 可以看到进程信息但界面却无法出现的情况，可以通过点击右上角的关机选项，在弹出确认后点击取消， 一般情况下可以看到网易云的界面弹出，原因暂时未知。
 4. 重启电脑
 
 #### 安装Franz
