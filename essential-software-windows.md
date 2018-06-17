@@ -15,6 +15,7 @@ tags: [ software ]
 
 ### 便捷操作工具
 * [WGestures](http://www.yingdev.com/projects/wgestures)
+* [f.lux](https://justgetflux.com/news/pages/v4/welcome/)
 ### 音乐播放器
 * [网易云音乐](https://music.163.com/#/download)
 ### 聊天工具
