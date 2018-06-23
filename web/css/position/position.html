@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>position</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div style="height: 500px;">
+        <div class="static">static</div>
+        <div class="relative">relative</div>
+        <div class="absolute">absolute</div>
+        <div class="fixed">fixed</div>
+        <div class="sticky">sticky</div>
+    </div>
+    <ol style="margin-top: 100px;">
+        <li>position适用于display值不为table-column-group或table-column之外的所有元素</li>
+        <li>其对应的脚本属性为position</li>
+        <li>但position的值为非static时, 其层叠级别通过z-index属性定义</li>
+        <li>static: 对象遵循常规流. 此时4个定位偏移属性不会被应用</li>
+        <li>relative: 对象遵循常规流. 并且参照自身在常规流的位置通过top, right, bottom, left这4个定位偏移时不会影响常规流中的任何元素</li>
+        <li>absolute: 对象脱离文档流, 此时偏移位置参照的是离自己最近的非static祖先元素, 如果没有定位的祖先元素, 则一直回溯到html元素. 盒子的偏移位置不影响常规流中的任何元素, 其margin不与其他任何margin重叠; 但如果不设置其TRBL中的任何一个值, 会紧随在其前面的兄弟元素之后, 但在位置上不影响常规流中的任何元素.</li>
+        <li>fixed: 与absolute一致, 但偏移定位是以窗口为参考. 当出现滚动条时, 对象不会随着滚动</li>
+        <li>sticky: 对象在常态时遵循常规流. 它类似于relative和fixed的合体, 当在屏幕中按常规流排版, 当滚动到屏幕外时则表现为fixed.</li>
+        有以下几点需要注意:
+        <ol>
+            <li>具有sticky属性的元素, 其父元素的高度必须大于sticky元素的高度. 当父元素的一部分滚动到屏幕外, 其表现为fixed, 然而当其底部与父元素的底部重合时, 其会跟随父元素一起滚动</li>
+            <li>sticky元素的父级不能含有overflow: hidden和overflow: auto属性</li>
+            <li>必须具有top或者bottom属性</li>
+            <li></li>
+        </ol>
+    </ol>
+</body>
+</html>

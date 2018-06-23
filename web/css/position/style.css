@@ -1,0 +1,50 @@
+/* 
+    position style
+*/
+body {
+    height: 2000px;
+    margin: 10px;
+}
+
+div {
+    border: 1px darkblue solid;
+    width: 200px;
+    line-height: 100px;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+}
+
+.static {
+    height: 100px;
+    background-color: red;
+}
+
+.relative {
+    height: 100px;
+    position: relative;
+    background-color: orange;
+}
+
+.absolute {
+    height: 100px;
+    position: absolute;
+    background-color: violet;
+    top: 300px;
+}
+
+.fixed {
+    height: 100px;
+    position: fixed;
+    top: 0px;
+    left: 212px;
+    background-color: green;
+}
+
+.sticky {
+    height: 100px;
+    position: sticky;
+    background-color: blue;
+    z-index: 10;
+    top: 20px;
+}

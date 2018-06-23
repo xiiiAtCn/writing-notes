@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>float & position</title>
+    <style>
+        #demo1 {
+            height: 100px;
+            background-color: aquamarine;
+        }
+
+        #demo2 {
+            height: 100px;
+            background-color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo1">demo1</div>
+    <div id="demo2">demo2</div>
+    <div style="margin-top: 500px;">
+        <form >
+            <fieldset>
+                <label >position:
+                    <select name="position">
+                        <option value="static">static</option>
+                        <option value="relative">relative</option>
+                        <option value="absolute">absolute</option>
+                        <option value="fixed">fixed</option>
+                        <option value="sticky">sticky</option>
+                    </select>
+                </label>
+                <label >top: <input type="number" value="0" name="top" /></label>
+                <label >left: <input type="number" value="0" name="left" /></label>
+                <label >bottom: <input type="number" value="0" name="bottom" /></label>
+                <label >right: <input type="number" value="0" name="right" /></label>
+            </fieldset>
+            <fieldset>
+                <label>float: 
+                    <select name="float" >
+                        <option value="none">none</option>
+                        <option value="left">left</option>
+                        <option value="right">right</option>
+                    </select>
+                </label>
+                <label >element:
+                    <select name="element" >
+                        <option value="demo1">demo1</option>
+                        <option value="demo2">demo2</option>
+                    </select>
+                </label>
+            </fieldset>
+            <button>set</button>
+        </form>
+        <div style="width: 100%;">
+            <div style="width: 50%;">
+                <h3>demo1</h3>
+                <div id="demo1_style">
+
+                </div>
+            </div>
+            <div style="width: 50%;">
+                <h3>demo2</h3>
+                <div id="demo2_style">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let form = document.forms[0]
+    form.addEventListener('submit', function(e) {
+        e.preventDefault()
+        let data = new FormData(form)
+        let element = data.get('element')
+        let content = document.querySelector('#' + element + '_style')
+        element = document.querySelector('#' + element)
+        element.style.position = data.get('position')
+        element.style.top = data.get('top') + 'px'
+        element.style.left = data.get('left') + 'px'
+        element.style.bottom = data.get('bottom') + 'px'
+        element.style.right = data.get('right') + 'px'
+        element.style.cssFloat = data.get('float')
+        content.innerHTML = `
+            <pre>
+                position: ${element.style.position}
+                top: ${element.style.top}
+                left: ${element.style.left}
+                bottom: ${element.style.bottom}
+                right: ${element.style.right}
+                float: ${element.style.cssFloat}
+                display: ${element.style.display}
+            </pre>
+        `
+    }, false)
+
+</script>
+</html>

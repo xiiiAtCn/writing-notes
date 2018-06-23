@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>z-index</title>
+    <style>
+        div {
+            position: relative;
+        }
+        div p {
+            position: absolute;
+            z-index: 1;
+        }
+        .a {
+            background: #f00;
+            z-index: 10;
+        }
+        .b {
+            background: #0ff;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>  
+
+
+    <div class="test">
+        <p class="a">asdas</p>
+    </div>
+    <div class="test2">
+        <p class="b">asdas</p>
+    </div>
+    <div style="position: absolute;z-index: 2;">
+        <div class="test">
+            <p class="b">asdaz</p>
+        </div>        
+    </div>
+    <p style="margin-top: 100px;">
+        test
+    </p>
+    <!-- 此处设置margin会导致上面的div文字下移 -->
+    <ol style="margin-top: 200px;">
+        <li>z-index用于确定元素在当前层叠上下文中的层叠级别, 并确定该元素是否创建新的局部层叠上下文</li>
+        <li>当某个元素的z-index未显式定义或被指定为auto时, 该元素不会产生新的局部层叠上下文. 也就是说它可以和兄弟, 祖先, 后辈元素处于同一个堆叠上下文中</li>
+        <li></li>
+    </ol>
+</body>
+</html>
