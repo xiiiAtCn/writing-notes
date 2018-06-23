@@ -28,3 +28,4 @@ tags: [ software ]
 * [nodejs](https://nodejs.org/zh-cn/)
 * [vscode](https://code.visualstudio.com/)
 ### 虚拟机软件
+* [VMWare](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)
