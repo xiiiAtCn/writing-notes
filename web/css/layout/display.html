@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>display</title>
+    <style>
+        .test {
+            background-color: blueviolet;
+            padding: 10px 20px;
+            border: 1px red solid;
+            margin: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test">
+        this is a test  
+    </div>
+    <div>
+        <form >
+            <fieldset>
+                <label >display:
+                    <select name="display">
+                        <option value="none">none</option>
+                        <option value="inline">inline</option>
+                        <option value="block">block</option>
+                        <option value="list-item">list-item</option>
+                        <option value="inline-block">inline-block</option>
+                        <option value="table">table</option>
+                        <option value="inline-table">inline-table</option>
+                        <option value="table-caption">table-caption</option>
+                        <option value="table-row">table-row</option>
+                        <option value="table-row-group">table-row-group</option>
+                        <option value="table-cell">table-cell</option>
+                        <option value="table-column">table-column</option>
+                        <option value="table-column-group">table-column-group</option>
+                        <option value="table-header-group">table-header-group</option>
+                        <option value="table-footer-group">table-footer-group</option>
+                        <option value="flex">flex</option>
+                        <option value="inline-flex">inline-flex</option>
+                    </select>
+                </label>
+                <label >float: 
+                    <select name="float">
+                        <option value="none">none</option>
+                        <option value="left">left</option>
+                        <option value="right">right</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                    <label >position:
+                        <select name="position">
+                            <option value="static">static</option>
+                            <option value="relative">relative</option>
+                            <option value="absolute">absolute</option>
+                            <option value="fixed">fixed</option>
+                            <option value="sticky">sticky</option>
+                        </select>
+                    </label>
+                    <label >top: <input type="number" value="0" name="top" /></label>
+                    <label >left: <input type="number" value="0" name="left" /></label>
+                    <label >bottom: <input type="number" value="0" name="bottom" /></label>
+                    <label >right: <input type="number" value="0" name="right" /></label>
+                </fieldset>
+            <button>set</button>
+        </form>
+        <h3>test元素部分属性</h3>
+        <div class="content">
+            <pre>
+                display: 
+            </pre>
+        </div>
+    </div>
+    <ol>
+        <li>diplay属性适用于所有元素, 除了浮动元素, 绝对定位和根元素外, 其属性值均为指定值</li>
+        <li>display可以取以下值
+            <ol>
+                <li>none: 隐藏对象, 与visibili属性的hidden值不同, 其不为被隐藏的对象保留其物理空间</li>
+                <li>inline: 指定对象为内联元素</li>
+                <li>block: 指定对象为块元素</li>
+                <li>list-item: 指定对象为列表项目</li>
+                <li>inline-block: 指定对象为内联块元素</li>
+                <li>table: 指定对象作为块元素级的表格. 类同于html标签table</li>
+                <li>inline-table: 指定对象作为内联元素级的表格. 类同于html标签table</li>
+                <li>table-caption: 指定对象作为表格标题. 类同于html标签caption</li>
+                <li>table-cell: 指定对象作为表格单元格. 类同于html标签td</li>
+                <li>table-row: 指定对象作为表格单元格. 类同于html标签tr</li>
+                <li>table-row-group: 指定对象作为表格行组. 类同于html标签tbody</li>
+                <li>table-column: 指定对象作为表格列. 类同于html标签col</li>
+                <li>table-column-group: 指定对象作为表格列组显示. 类同于html标签colgroup</li>
+                <li>table-header-group: 指定对象作为表格标题组. 类同于html标签thead</li>
+                <li>table-footer-group: 指定对象作为表格脚注组. 类同于html标签tfoot</li>
+                <li>run-in: 根据上下文决定对象是内联对象还是块级对象</li>
+                <li>flex: 将对象作为弹性伸缩盒显示</li>
+                <li>inline-flex: 将对象作为内联块级弹性伸缩盒显示</li>
+            </ol>
+        </li>
+        <li>如果display设置为none, float及position属性定义将不生效</li>
+        <li>如果position既不是static也不是relative或者float不是none或者该元素是根元素, 当display: inline-table时, display的计算值为table; 当display: inline|inline-block|table-*时, display的计算值为block</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+</body>
+<script>
+    let element = document.querySelector('.test')
+    let form = document.forms[0]
+    form.addEventListener('submit', function(e) {
+        e.preventDefault()
+        let data = new FormData(form)
+        element.style.display = data.get('display')
+        element.style.float = data.get('float')
+        element.style.position = data.get('position')
+        element.style.top = data.get('top') + 'px'
+        element.style.left = data.get('left') + 'px'
+        element.style.bottom = data.get('bottom') + 'px'
+        element.style.right = data.get('right') + 'px'
+
+        let content = document.querySelector('.content')
+        content.innerHTML = `
+            <pre>
+                position: ${element.style.position}
+                top: ${element.style.top}
+                left: ${element.style.left}
+                bottom: ${element.style.bottom}
+                right: ${element.style.right}
+                float: ${element.style.cssFloat}
+                display: ${element.style.display}
+            </pre>
+        `
+
+    }, false)
+</script>
+</html>

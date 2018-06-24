@@ -130,3 +130,5 @@ sudo apt-get install oracle-java8-installer
 #### ubuntu安装nodejs
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt install -y nodejs
+
+#### css中的百分比值

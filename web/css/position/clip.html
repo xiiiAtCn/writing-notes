@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>clip</title>
+    <style>
+        .clip {
+            background-image: url('./scenery.jpg');
+            height: 183px;
+            width: 275px;
+        }
+    </style>
+</head>
+<body>
+    <div style="position: relative;height: 200px;">
+        <div style="position: absolute;background-color: blueviolet;height: 183px;width: 275px;">
+            我在背后
+        </div>
+        <div class="clip">
+        </div>
+    </div>
+    <div style="margin-top: 200px;">
+        <form >
+            <label >position:
+                <select name="position">
+                    <option value="static">static</option>
+                    <option value="relative">relative</option>
+                    <option value="absolute">absolute</option>
+                    <option value="fixed">fixed</option>
+                    <option value="sticky">sticky</option>
+                </select>
+            </label>
+            <label >top: <input type="number" value="0" name="top"></label>
+            <label >right: <input type="number" value="0" name="right"></label>
+            <label >bottom: <input type="number" value="0" name="bottom"></label>
+            <label >left: <input type="number" value="0" name="left"></label>
+            <button>set</button>
+        </form>
+        <h3>clip元素相关信息</h3>
+        <div id="content">
+            <pre>
+                width: 
+                height: 
+                position: 
+                clip: 
+            </pre>
+        </div>
+    </div>
+    <ol >
+        <li>
+            clip可接受auto或rect(<number>|auto <number>|auto <number>|auto <number>|auto), 即依据上-右-下-左的顺序提供自对象左上角(0, 0)坐标计算的四个偏移数值, 其中任何一个数值都可用auto替换, 即此边不剪切
+        </li>
+        <li>position的值必须为absolute或者fixed, 此属性才会生效</li>
+        <li>裁剪相当于移除了部分内容, 底部的内容会显示出来</li>
+    </ol>
+</body>
+<script>
+    let form = document.forms[0]
+    form.addEventListener('submit', function(e) {
+        e.preventDefault()
+        let data = new FormData(form)
+        let element = document.querySelector('.clip')
+        element.style.position = data.get('position')
+        element.style.clip = `rect(${data.get('top')}px, ${data.get('right')}px, ${data.get('bottom')}px, ${data.get('left')}px)`
+        debugger
+        document.querySelector('#content').innerHTML = `
+            <pre>
+                width: ${element.style.width},
+                height: ${element.style.height},
+                position: ${element.style.position},
+                clip: ${element.style.clip}
+            </pre>
+        `
+    }, false)
+</script> 
+</html>
