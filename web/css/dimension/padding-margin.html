@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>padding_pargin</title>
+    <style>
+        .test {
+            background-color: violet;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="test">
+            测试
+        </div>
+        <form>
+            <fieldset>
+                <label >
+                    margin: <input type="number" name="margin" />
+                </label>
+                <label>
+                    padding: <input type="number" name="padding" />
+                </label>
+            </fieldset>
+            <button>set</button>
+        </form>
+        <h3>test部分样式</h3>
+        <div class="content">
+            <pre>
+                
+            </pre>
+        </div>
+    </div>
+    <ol>
+        <li>margin适用于除table | inline-table | table-caption的表格类元素和非替代行内元素外的所有元素</li>
+        <li>分为vertical-margin和horizontal-margin
+            <ol>
+                <li>auto: 水平书写模式下, vertical-margin的计算值为0, horizontal-margin取决于包含块的剩余可用空间</li>
+                <li>length: 用长度值来定义, 可以为负值</li>
+                <li>percentage: 用百分比来定义.水平书写模式下, 参照包含块的width进行计算, 其他情况参照height, 可以是负值</li>
+            </ol>
+        </li>
+        <li></li>
+    </ol>
+</body>
+
+<script>
+    let form = document.forms[0]
+    form.addEventListener('submit', function(e) {
+    let element = document.querySelector('.test')
+        e.preventDefault()
+        let data = new FormData(form)
+        element.style.margin = data.get('margin') + 'px'
+        element.style.padding = data.get('padding') + 'px'
+        let content = document.querySelector('.content') + 'px'
+        content.innerHTML = `
+            <pre>
+                margin-left: ${element.style.marginLeft}
+                margin-right: ${element.style.marginRight}
+                margin-top: ${element.style.marginTop}
+                margin-bottom: ${element.style.marginBottom}
+                padding-left: ${element.style.paddingLeft}
+                padding-right: ${element.style.paddingRight}
+                padding-top: ${element.style.paddingTop}
+                padding-bottom: ${element.style.paddingBottom}
+            </pre>
+            `
+    }, false)
+</script>
+</html>
