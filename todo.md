@@ -142,7 +142,7 @@ sudo apt install -y nodejs
 * max-height: 用百分比来定义高度, 百分比参照包含块高度。不允许负值
 * padding: 水平书写模式下, 参照其包含块的width进行计算, 其他情况参照height, 可以为负值
 * margin: 水平书写模式下, 参照其包含块的width进行计算, 其他情况参照height, 可以为负值
-
+* border-radius: 用百分比定义圆形半径或椭圆的半长轴, 半短轴. 水平方向百分比参照元素宽度(非内容宽度), 垂直方向参照元素高度. 不允许负值.
 ### white-space word-wrap word-break text-overflo
 
 ### chrome插件--一键下载页面中的所有内容
