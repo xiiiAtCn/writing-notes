@@ -7,6 +7,36 @@
     <title>size</title>
 </head>
 <body>
+
+    <div>
+        <div class="test" contenteditable="true">
+
+        </div>
+        <form>
+            <fieldset>
+                <label >
+                    height: <input type="number" name="height" />
+                </label>
+                <label>
+                    width: <input type="number" name="width" />
+                </label>
+                <label >
+                    min-width: <input type="number" name="min-width" />
+                </label>
+                <label >
+                    max-width: <input type="number" name="max-width"/>
+                </label>
+            </fieldset>
+            <button>set</button>
+        </form>
+        <div>
+            <h3>test部分属性</h3>
+            <pre>
+
+            </pre>
+        </div>
+    </div>
+
     <ol>
         <li>
             width, min-width, max-width, height, min-height, max-height, 均适用于除非置换内联元素, table-row, table-row-group之外的所有元素
@@ -22,15 +52,28 @@
         </li>
         <li>
             percentage, 用百分比来定义宽度, width百分比参照包含块宽度, height百分比需要区别对待
+        </li>
+        <li>
+            width, min-width与max-width之间的关系
             <ol>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>当min-width属性的值小于width时, min-width属性将会被忽略</li>
+                <li>当max-width属性的值小于width时, max-width属性将会被忽略, 同时width会忽略自己的值定义而使用max-width的值作为自己的使用值</li>
+                <li>当min-width属性的值大于width时, min-width属性将会被忽略, 同时width会忽略自己的值定义而使用min-width的值作为自己的使用之</li>
+                <li>当max-width属性的值大于width时, max-width属性将会被忽略</li>
+                <li>当min-width属性的值大于max-width时, max-width属性将会被忽略</li>
+                <li>当max-width属性的值小于min-width时, max-width属性将会被忽略</li>
             </ol>
         </li>
-
     </ol>
 </body>
+<script>
+    let form = document.forms[0]
+    form.addEventListener('submit', function(e) {
+    let element = document.querySelector('test')
+        e.preventDefault()
+        let data = new FormData(form)
+        element.style.width = 
+    }, false)
+
+</script>
 </html>

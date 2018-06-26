@@ -132,3 +132,11 @@ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt install -y nodejs
 
 #### css中的百分比值
+
+#### white-space word-wrap word-break text-overflo
+
+#### chrome插件--一键下载页面中的所有内容
+1. 支持对html的下载
+2. 支持对静态文件的下载
+3. 支持目录层级及静态资源路径替换
+4. css文件中的静态资源下载
