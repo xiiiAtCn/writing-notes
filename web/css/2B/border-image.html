@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>border-image</title>
+    <style>
+        .border-image {
+            margin-top: 10px;
+            border-style: dashed;
+            border-color: orange;
+            width: 268px;
+            height: 188px;
+            border-image-source: url(./border-image.jpg);
+            border-image-repeat: repeat stretch;
+            border-image-width: auto;
+            border-image-outset: 10px;
+        }
+        
+        .slice-number {
+            border-image-slice: 25 25;
+        }
+
+        .slice-percentage {
+            border-image-slice: 2% 4% 6% 8%;
+        }
+
+        .slice-fill {
+            border-image-slice: 10 20 30 40 fill;
+        }
+    </style>
+</head>
+<body>
+    <div class="border-image slice-number"></div>
+    <div class="border-image slice-percentage"></div>
+    <div class="border-image slice-fill"></div>
+    <ol>
+        <li>border-image, 定义了border-image的多个子属性, 适用于除table元素设置了border-collapse属性值为collapse之外的所有元素. border-image-source || border-image-slice [ / border-image-width | / border-image-width ? / border-image-outset ]? || border-image-repeat</li>
+        <li>border-image-source定义元素边框样式所使用的图像, 可以取两种值, none表示无背景图片, &lt;image&gt;表示使用绝对或相对地址或者创建渐变色来确定图像</li>
+        <li>border-image将会替代border-所定义的边框样式. 但border-image为none或图像不可见时, 将会显示borde所定义的边框样式效果</li>
+        <li>border-image-slice用以指定分别从哪4个位置分割图像(遵循上右下左的顺序)</li>
+        <li>border-image-slice可以取以下三种值
+            <ol>
+                <li>number: 用浮点数指定图像分割的位置. 数字代表在图像上的像素位置或向量坐标, 不能带px之类的单位. 不允许为负值</li>
+                <li>percentage: 用百分比指定图像分割的位置. 垂直和水平方向的百分比分别参照图片的宽和高进行换算. 不允许负值</li>
+                <li>fill: 保留裁剪后的中间区域, 其铺排方式遵循border-image-repeat的定义</li>
+            </ol>
+        </li>
+        <li>当不设置border-style时, border-image-slice除了fill之外的属性不生效</li>
+        <li>border-image-width定义元素边框图像的厚度. 可使用下面几种值:
+            <ol>
+                <li>长度值: 用长度值指定图像边框的厚度, 不允许负值</li>
+                <li>百分比值: 用百分比指定图像边框的厚度. 参照图像边框区域的大小(包括border和padding)进行换算. 不允许负值</li>
+                <li>数字值: 用浮点数指定图像边框的厚度. 该值表示为border-width的倍数</li>
+                <li>auto: 如果auto值被设置, 则border-image-width采用与border-image-slice相同的值</li>
+            </ol>
+        </li>
+        <li>border-image-outset定义边框图像从边框边界向外偏移的距离, 可取以下两种值.
+            <ol>
+                <li>长度值: 用长度值指定边框图像向外偏移的距离, 不允许为负值</li>
+                <li>数字值: 用浮点数指定边框图像向外偏移的距离. 该值表示border-width的倍数. 不允许为负值</li>
+            </ol>
+        </li>
+        <li>该属性用于指定边框图像向外偏移的距离. 如果值为10px, 则图像在原来的基础上再往外延申10px再显示. 但并不会影响布局, 因为它本身并不占据布局空间</li>
+        <li>border-image-repeat定义分割图像怎样填充边框图像区域. 可以取以下几种值之一
+            <ol>
+                <li>stretch: 将被分割的图像使用拉伸的方式来填充满边框图像区域</li>
+                <li>repeat: 将被分割的图像使用重复平铺的方式来填充满边框图像区域. 但图像遇到边界时, 如果超过则被截断</li>
+                <li>round: 与repeat关键字类似. 不同在于, 当背景图像不能以整数次平铺时, 会根据情况缩放图像</li>
+                <li>space: 与repeat关键字类似. 不同在于, 当背景图像不能以整数次平铺时, 会用空白间隙填充在图像周围</li>
+            </ol>
+        </li>
+        <li>该属性接受1~2个参数值, 如果提供两个参数, 第一个用于水平方向, 第二个用于垂直方向, 只提供一个, 则水平和垂直方向都引用该值</li>
+    </ol>
+</body>
+</html>
