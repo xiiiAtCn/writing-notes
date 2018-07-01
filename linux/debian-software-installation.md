@@ -227,3 +227,6 @@ Exec=netease-cloud-music %U --no-sandbox
 ```
 2. 根据提示进行安装
 ![](./images/2018-05-14-224043_1161x216_scrot.png)
+
+#### 设置DNS服务器
+114.114.115.115
