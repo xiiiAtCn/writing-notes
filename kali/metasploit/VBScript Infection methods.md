@@ -1,0 +1,2 @@
+# VBScript Infection Methods
+
