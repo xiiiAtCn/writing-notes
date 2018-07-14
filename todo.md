@@ -144,10 +144,17 @@ sudo apt install -y nodejs
 * margin: 水平书写模式下, 参照其包含块的width进行计算, 其他情况参照height, 可以为负值
 * border-radius: 用百分比定义圆形半径或椭圆的半长轴, 半短轴. 水平方向百分比参照元素宽度(非内容宽度), 垂直方向参照元素高度. 不允许负值.
 * border-image-slice: 用百分比指定图像分割的位置. 垂直和水平方向的百分比分别参照图片的宽和高进行换算, 不允许负值.
-### white-space word-wrap word-break text-overflo
+* line-height: 
+### white-space word-wrap word-break text-overflow
 
 ### chrome插件--一键下载页面中的所有内容
 1. 支持对html的下载
 2. 支持对静态文件的下载
 3. 支持目录层级及静态资源路径替换
 4. css文件中的静态资源下载
+
+#### node html转图片库
+
+#### http, https代理
+
+#### BBR加速

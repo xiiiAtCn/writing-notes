@@ -61,6 +61,14 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git
     git clone https://github.com/shadowsocksr-backup/shadowsocksr.git
     apt install polipo
 ```
+
+##### ssr一键脚本
+```bash
+wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
+chmod +x shadowsocks-all.sh
+./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
+
+```
 shadowsocksr配置需要去github查看， 根据服务器不同， 需要的配置项也不同。  
 polipo配置
 ```properties
