@@ -23,7 +23,7 @@ service postgresql start
 ```
 - 安装gedit软件
   
-### Linux工具安装
+### Linux工具
 - 对PE、ELF、Mach-O等二进制文件注入shellcode: 
 [the-backdoor-factory](https://github.com/secretsquirrel/the-backdoor-factory.git)
 - 实现屏幕截图和网页的获取: [HTTPScreenShot](https://github.com/breenmachine/httpscreenshot.git)
@@ -54,7 +54,9 @@ service postgresql start
 - 分析PCAP文件, 获取用户名和密码: [Net-Creds](https://github.com/DanMcInerney/net-creds.git)
 - WiFi网络攻击工具: [Wifite](https://github.com/derv82/wifite.git) [Wifite](https://github.com/derv82/wifite2.git)
 - WiFi网络自动化钓鱼攻击: [WIFIPhisher](https://github.com/wifiphisher/wifiphisher.git)
+- 码字典生成工具: [Wordhound](https://bitbucket.org/mattinfosec/wordhound.git)
 - 更新网址: [Hacker Play Book](http://thehackerplaybook.com/updates/)
+  
 ### Windows工具
 - PowerShell脚本用户后渗透工具: [PowerSploit](https://github.com/PowerShellMafia/PowerSploit.git)
 - PowerShell漏洞利用和后渗透测试脚本汇总: [Nishang](https://github.com/samratashok/nishang.git)
@@ -66,8 +68,7 @@ service postgresql start
 - 一款系统弱点扫描与分析软件: [Nessus](https://www.tenable.com/downloads/nessus)
 - 端口扫描工具: [nmap](https://nmap.org/)
 - 密码恢复工具: [oclHashcat](https://hashcat.net/hashcat/)
-- 密码恢复工具, 该隐与亚伯
-: [Cain and Abel](https://hashcat.net/hashcat/)
+- 密码恢复工具, 该隐与亚伯: [Cain and Abel](https://hashcat.net/hashcat/)
 - [Burp Proxy Pro](https://portswigger.net/burp)
 - FireFox插件
     - Web开发人员插件
