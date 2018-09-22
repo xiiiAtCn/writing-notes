@@ -159,7 +159,22 @@ sudo apt install -y nodejs
 
 #### BBR加速
 
+#### 静态服务器
 
-### gist
-token: defa68e3489d054a9c7ec83ebede5a977aa7b6a5  
-id: 7edece88483e14973c5b7558f1ef998c
+1. 上传
+2. 创建文件夹
+3. 下载
+4. 存储文件基本信息
+5. 上传进度
+
+- 文件描述
+    - 名字
+    - 文件类型
+    - 平台
+    - 备注
+    - 保存路径
+
+### Cygwin国内镜像
+- 上海交大的FTP：ftp://ftp.sjtu.edu.cn/sites/cygwin.com/pub/cygwin/
+- 163的镜像：http://mirrors.163.com/cygwin/
+- 搜狐: http://mirrors.sohu.com/cygwin/

@@ -55,6 +55,7 @@ service postgresql start
 - WiFi网络攻击工具: [Wifite](https://github.com/derv82/wifite.git) [Wifite](https://github.com/derv82/wifite2.git)
 - WiFi网络自动化钓鱼攻击: [WIFIPhisher](https://github.com/wifiphisher/wifiphisher.git)
 - 码字典生成工具: [Wordhound](https://bitbucket.org/mattinfosec/wordhound.git)
+- 导入网页并生成密码字典: [BruteScrape](https://github.com/cheetz/brutescrape.git)
 - 更新网址: [Hacker Play Book](http://thehackerplaybook.com/updates/)
   
 ### Windows工具
