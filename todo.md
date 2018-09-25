@@ -165,3 +165,22 @@ sudo apt install -y nodejs
 3. 可选日志输出
 4. list便捷添加
 5. 可设置背景图
+#### 静态服务器
+
+1. 上传
+2. 创建文件夹
+3. 下载
+4. 存储文件基本信息
+5. 上传进度
+
+- 文件描述
+    - 名字
+    - 文件类型
+    - 平台
+    - 备注
+    - 保存路径
+
+### Cygwin国内镜像
+- 上海交大的FTP：ftp://ftp.sjtu.edu.cn/sites/cygwin.com/pub/cygwin/
+- 163的镜像：http://mirrors.163.com/cygwin/
+- 搜狐: http://mirrors.sohu.com/cygwin/

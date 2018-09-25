@@ -1,3 +1,4 @@
 .vscode/
 **/.vscode/
 **/_book/
+hack/**/*.exe
