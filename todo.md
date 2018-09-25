@@ -158,3 +158,10 @@ sudo apt install -y nodejs
 #### http, https代理
 
 #### BBR加速
+
+#### ssr改造项目
+1. 悬浮窗代理切换
+2. 网速统计折线图
+3. 可选日志输出
+4. list便捷添加
+5. 可设置背景图
