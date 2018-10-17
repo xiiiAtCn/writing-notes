@@ -184,3 +184,6 @@ sudo apt install -y nodejs
 - 上海交大的FTP：ftp://ftp.sjtu.edu.cn/sites/cygwin.com/pub/cygwin/
 - 163的镜像：http://mirrors.163.com/cygwin/
 - 搜狐: http://mirrors.sohu.com/cygwin/
+
+### Invoke-WebRequest SSL失败
+[https://stackoverflow.com/questions/36265534/invoke-webrequest-ssl-fails](https://stackoverflow.com/questions/36265534/invoke-webrequest-ssl-fails)
