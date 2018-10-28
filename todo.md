@@ -184,3 +184,13 @@ sudo apt install -y nodejs
 - 上海交大的FTP：ftp://ftp.sjtu.edu.cn/sites/cygwin.com/pub/cygwin/
 - 163的镜像：http://mirrors.163.com/cygwin/
 - 搜狐: http://mirrors.sohu.com/cygwin/
+
+### 下载网站
+电脑应用
+ - Windows
+    - 装机必备软件
+    - geek必备
+    - 功能性
+    - 娱乐
+ - Linux
+浏览器插件
