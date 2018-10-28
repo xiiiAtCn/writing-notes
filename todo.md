@@ -194,3 +194,5 @@ sudo apt install -y nodejs
     - 娱乐
  - Linux
 浏览器插件
+### Invoke-WebRequest SSL失败
+[https://stackoverflow.com/questions/36265534/invoke-webrequest-ssl-fails](https://stackoverflow.com/questions/36265534/invoke-webrequest-ssl-fails)
