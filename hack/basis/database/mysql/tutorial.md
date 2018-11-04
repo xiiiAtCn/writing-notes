@@ -5,14 +5,14 @@ category: mysql
 tags: [ database, fundamental ]
 ---
 ## 0x00
-作为一个前端, 平时很少接触数据库. 虽然在平时觉得自己也会一点sql语句, 但当真的需要自己在数据库中创建用户, 授权和创建表结构时, 就有点不知所措了, 更不要说什么字符编码格式设置, 数据库备份了. 每次自己想要折腾点什么的时候, 总是会被这些开发前的基础操作卡住. 这次终于痛下决心, 将mysql使用中常用的一些命令做一个总结, 以便在之后再次碰到时可以有一个查询的地方, 不至于再在google上查的死去活来, 劳心又劳力. 好了, 正文开始.
+作为一个前端, 平时很少接触数据库. 当需要自己在数据库中创建用户, 授权和创建表结构时, 就有点不知所措了, 更不要说什么字符编码格式设置, 数据库备份了. 每次自己想要折腾点什么的时候, 总是会被这些开发前的基础操作卡住. 这次终于痛下决心, 将mysql使用中常用的一些命令做一个总结, 以便在之后再次碰到时可以有一个查询的地方, 不至于再在google上查的死去活来, 劳心又劳力. 好了, 正文开始.
 
 ## 0x01: mysql服务启动和停止
 在linux上, 可以使用service命令来查看mysql服务的运行状态. 
 ```bash
 service mysql status
 ```
-如果mysql服务是开启状态的, 可以看到类似如下信息.
+如果Mysql服务是开启状态的, 可以看到类似如下信息.
 ```
 ● mariadb.service - MariaDB database server
    Loaded: loaded (/lib/systemd/system/mariadb.service; enabled; vendor preset: enabled)
@@ -32,7 +32,7 @@ Nov 04 10:05:21 iZ8vb19h08028cm32sq645Z systemd[1]: Starting MariaDB database se
 Nov 04 10:05:23 iZ8vb19h08028cm32sq645Z mysqld[583]: 2018-11-04 10:05:23 139923048784448 [Note] /usr/sbin/mysqld (mysqld 1
 Nov 04 10:05:23 iZ8vb19h08028cm32sq645Z systemd[1]: Started MariaDB database server.
 ```
-> 这里使用的mysql的一个衍生版: mariadb  
+> 这里使用的Mysql的一个衍生版: mariadb  
 
 service命令的基本使用格式如下:
 ```
@@ -70,7 +70,7 @@ CREATE USER 'jeffrey'@'localhost' IDENTIFIED BY 'mypass';
 如果需要将*SELECT*权限扩大到全部数据库, 则只需要将*db1*换成\*. 如果需要授予所有权限, 则需要将*SELECT*换成*ALL*.
 
 ### 授权时创建用户
-如果授权时, 该用户并未被创建, 则授权语句并不会报错, 而且, 会创建这个新用户, 并将权限赋予它. 所以, 一般情况下, 我们可以在同时进行用户的创建和授权. 那么就是下面的这种格式:
+如果授权时, 该用户并未被创建, 授权语句并不会报错, 与此同时, Mysql会创建这个新用户, 并将权限赋予它. 所以, 一般情况下, 我们可以在同时进行用户的创建和授权. 那么就是下面的这种格式:
 ```sql
 GRANT PRIVILEGES ON DATABASE.TABLE TO 'USERNAME'@'LOGINHOST' IDENTIFIED BY 'PASSWORD';
 ```
@@ -278,4 +278,4 @@ categories:
 在这里, 有更多细分的帮助说明. 在只有系统帮助的情况下, 就完成了以前需要在网上搜索很长时间才能完成的前期准备工作.
 
 ## 0x06: 后记
-授之以鱼, 不如授之以渔, 真正学会了如何利用系统帮助, 才能真正的事半功倍. 优秀的软件本身就是最好的帮助文档,通过这次对*Mysql*基本操作的学习和总结, 更加深了我对这句话的理解.
+授之以鱼, 不如授之以渔, 真正学会了如何利用系统帮助, 才能真正的事半功倍. 优秀的软件本身就是最好的帮助文档, 通过这次对*Mysql*基本操作的学习和总结, 更加深了我对这句话的理解.
