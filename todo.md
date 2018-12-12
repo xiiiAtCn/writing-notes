@@ -185,5 +185,14 @@ sudo apt install -y nodejs
 - 163的镜像：http://mirrors.163.com/cygwin/
 - 搜狐: http://mirrors.sohu.com/cygwin/
 
+### 下载网站
+电脑应用
+ - Windows
+    - 装机必备软件
+    - geek必备
+    - 功能性
+    - 娱乐
+ - Linux
+浏览器插件
 ### Invoke-WebRequest SSL失败
 [https://stackoverflow.com/questions/36265534/invoke-webrequest-ssl-fails](https://stackoverflow.com/questions/36265534/invoke-webrequest-ssl-fails)
