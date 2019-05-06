@@ -1,0 +1,3 @@
+[submodule "language/rust"]
+	path = language/rust
+	url = https://github.com/xiiiAtCn/rust-learning.git
